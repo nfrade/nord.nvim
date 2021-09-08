@@ -1,8 +1,9 @@
+
 # shaunsingh/nord.nvim 
 
 ## Neovim theme based off of the [Nord Color Palette.](https://www.nordtheme.com/docs/colors-and-palettes)
 
-![nord-mountains-night-5k-gn-3840x2160](https://user-images.githubusercontent.com/71196912/118406380-d78ad580-b649-11eb-945c-5988fa717f39.jpg)
+![118406380-d78ad580-b649-11eb-945c-5988fa717f39](https://user-images.githubusercontent.com/71196912/128029391-ad55fd41-d5f9-43bd-a795-c11b562f9d6d.jpg)
 
 ## Features
 
@@ -58,7 +59,7 @@ colorscheme nord
 
 ```lua
 --Lua:
-require('nord').set()
+vim.cmd[[colorscheme nord]]
 ```
 
 To enable the `nord` theme for `Lualine`, simply specify it in your lualine settings:
@@ -82,13 +83,15 @@ require('lualine').setup {
 | nord_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
 | nord_cursorline_transparent     | `false`     | Set the cursorline transparent/visible
 | nord_enable_sidebar_background  | `false`     | Re-enables the backgrond of the sidebar if you disabled the background of everything
-
+| nord_italic                     | `true`      | enables/disables italics
+ 
 
 ```lua
 -- Example config in lua
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
 vim.g.nord_disable_background = false
+vim.g.nord_italic = false
 
 -- Load the colorscheme
 require('nord').set()
@@ -99,6 +102,7 @@ require('nord').set()
 let g:nord_contrast = v:true
 let g:nord_borders = v:false
 let g:nord_disable_background = v:false
+let g:nord_italic = v:false
 
 -- Load the colorscheme
 colorscheme nord
